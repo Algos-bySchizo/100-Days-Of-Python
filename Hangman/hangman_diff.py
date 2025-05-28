@@ -1,7 +1,7 @@
 import random
 import os
-from stages import stages
-from listofwords import listofwords
+from Hangman.stages import stages
+from Hangman.listofwords import listofwords
 lives=6
 chosenword=random.choice(listofwords)
 # print(chosenword)

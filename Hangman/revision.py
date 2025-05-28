@@ -1,5 +1,5 @@
-from listofwords import listofwords
-from stages import stages
+from Hangman.listofwords import listofwords
+from Hangman.stages import stages
 import random
 import os
 lives=6
