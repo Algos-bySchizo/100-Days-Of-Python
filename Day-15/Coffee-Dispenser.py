@@ -1,5 +1,4 @@
 from resources import resources, menu, profit
-
 def report():
     print(f""" 
 Water = {resources['water']} ML
