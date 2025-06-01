@@ -43,7 +43,7 @@ while is_on:
     choice=input('what would you like to have to drink? (Espresso/Latte/Cappuccino?) : ').lower()
     # is_on=choice!='off'
     if choice=='report':
-        report()
+        report()    
     elif choice=='off':
         is_on=False
     else:

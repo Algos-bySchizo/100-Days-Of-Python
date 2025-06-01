@@ -8,8 +8,7 @@ class MenuItem:
             "milk": milk,
             "coffee": coffee
         }
-
-
+        
 class Menu:
     """Models the Menu with drinks."""
     def __init__(self):
