@@ -7,10 +7,10 @@ class QuizBrain():
     def next_question(self):
         current_question=self.question_list[self.question_no]
         self.question_no+=1
-        input(f"Q.{self.question_no}: {current_question.text} (True/False): ")
+        user_answer=input(f"Q.{self.question_no}: {current_question.text} (True/False): ")
+        self.check_answer(user_answer)
 
     def still_has_questions(self):
         return self.question_no < len(self.question_list)
-    
     def check_answer():
-        
+        pass
