@@ -3,4 +3,4 @@ class Question:
         self.text=q_text
         self.answer=q_answer
     def __repr__(self):
-        return f"Question : {self.text} | Answer : {self.answer}\n"
+        return f"Question : {self.text!r} | Answer : {self.answer!r}\n"
