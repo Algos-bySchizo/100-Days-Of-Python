@@ -10,7 +10,8 @@ colors = [
 ]
 directions=[0,90,180,270]
 walk_not=True
-for i in range(100):
+for i in range(500):
+    tit.speed('fastest')
     tit.width(10)
     tit.color(random.choice(colors))
     tit.forward(30)
