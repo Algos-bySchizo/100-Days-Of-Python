@@ -10,7 +10,8 @@ colors = [
 ]
 directions=[0,90,180,270]
 walk_not=True
-while walk_not:
+for i in range(100):
+    tit.width(10)
     tit.color(random.choice(colors))
     tit.forward(30)
     tit.setheading(random.choice(directions))
