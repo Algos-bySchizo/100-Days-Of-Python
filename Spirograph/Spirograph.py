@@ -10,8 +10,10 @@ def random_color():
     color_tuple=(r,g,b)
     return color_tuple
 tit.speed('fastest')
-for i in range (72):
-    tit.color(random_color())
-    tit.circle(100)
-    tit.right(5)
+def draw_spirograph(gap):
+    for i in range (int(360/gap)):
+        tit.color(random_color())
+        tit.circle(100)
+        tit.right(gap)
+draw_spirograph(5)
 screen.exitonclick()
