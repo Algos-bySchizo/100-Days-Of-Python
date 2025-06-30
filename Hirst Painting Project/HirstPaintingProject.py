@@ -20,7 +20,6 @@ tit.setheading(225)
 tit.penup()
 tit.forward(400)
 tit.setheading(0)
-tit.showturtle()
 tit.speed('fastest')
 number_of_dot=100
 for dot_count in range(1,number_of_dot+1):
