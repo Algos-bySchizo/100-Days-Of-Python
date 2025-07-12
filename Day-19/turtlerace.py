@@ -1,7 +1,6 @@
 from turtle import Turtle,Screen
 import random
 screen=Screen()
-screen.colormode(255)
 screen.setup(width=500,height=400)
 start_y= -100
 colors_list= ['red', 'blue', 'green', 'orange', 'purple', 'pink']
