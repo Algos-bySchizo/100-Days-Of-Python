@@ -13,7 +13,6 @@ for i in range(6):
     t.penup()
     t.goto(x=-230, y=start_y + i * 40)
     turtle_list.append(t)
-is_race_on=False
 if users_bet:
     is_race_on=True
     while is_race_on:
