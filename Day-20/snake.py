@@ -18,3 +18,15 @@ class Snake:
                 last_snake_y=self.snakes[snake-1].ycor()
                 self.snakes[snake].goto(last_snake_x,last_snake_y)
         self.snakes[0].forward(PACE)
+    def left(self):
+        if self.snakes[0].heading()!=0:
+            self.snakes[0].setheading(180)
+    def right(self):
+        if self.snakes[0].heading()!=180:
+            self.snakes[0].setheading(0)
+    def up(self):
+        if self.snakes[0].heading()!=270:
+            self.snakes[0].setheading(90)
+    def down(self):
+        if self.snakes[0].heading()!=90:
+            self.snakes[0].setheading(270)
