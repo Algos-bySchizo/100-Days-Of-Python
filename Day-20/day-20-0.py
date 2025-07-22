@@ -11,12 +11,15 @@ for position in starting_positions:
     snake=Turtle('square')
     snake.color('white')
     snake.penup()
-    snake.goto(position)
     snakes.append(snake)
+    snake.goto(position)
 game_is_on=True 
 while game_is_on:
     screen.update()
     time.sleep(0.03)
-    for snake in snakes:
-        snake.forward(20)
+    for snake in range(len(snakes)-1,0,-1):
+        last_snake_x=snakes[snake-1].xcor()
+        last_snake_y=snakes[snake-1].ycor()
+        snakes[snake].goto(last_snake_x,last_snake_y)
+    snakes[0].forward(20)
 screen.exitonclick()
