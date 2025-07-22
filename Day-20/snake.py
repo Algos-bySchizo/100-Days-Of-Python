@@ -5,6 +5,7 @@ class Snake:
     def __init__(self):
         self.snakes=[]
         self.create_snake()
+        self.head=self.snakes[0]
     def create_snake(self):
         for position in STARTING_COORDINATES:
             snake=Turtle('square')
@@ -19,14 +20,14 @@ class Snake:
                 self.snakes[snake].goto(last_snake_x,last_snake_y)
         self.snakes[0].forward(PACE)
     def left(self):
-        if self.snakes[0].heading()!=0:
+        if self.head.heading()!=0:
             self.snakes[0].setheading(180)
     def right(self):
-        if self.snakes[0].heading()!=180:
+        if self.head.heading()!=180:
             self.snakes[0].setheading(0)
     def up(self):
-        if self.snakes[0].heading()!=270:
+        if self.head.heading()!=270:
             self.snakes[0].setheading(90)
     def down(self):
-        if self.snakes[0].heading()!=90:
+        if self.head.heading()!=90:
             self.snakes[0].setheading(270)
