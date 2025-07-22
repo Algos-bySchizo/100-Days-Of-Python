@@ -17,7 +17,7 @@ if users_bet:
     while is_race_on:
         for turtle in turtle_list:
             if turtle.xcor()>230:
-                is_race_on=False
+                is_race_on=False    
                 winning_color=turtle.pencolor()
                 if winning_color==users_bet:
                     print(f'You\'ve won the bet, The {winning_color} Turtle is the winner!')
