@@ -1,14 +1,12 @@
 from turtle import Turtle,Screen,Shape
+starting_positions=[(0,0),(-20,0),(-40,0)]
+for position in starting_positions:
+    snake=Turtle('square')
+    snake.color('white')
+    snake.goto(position)
+
 screen=Screen()
-poly=((0,0),(10,-5),(0,10),(-10,-5))
-s=Shape('compound')
-s.addcomponent(poly,'red',"blue")
-screen.register_shape("custom",s)
-
-t=Turtle()
-t.shape('custom')
-
-
-# snake=Turtle(shape='square')
-
+screen.setup(width=600,height=600)
+screen.bgcolor('black')
+screen.title('Snake Xenxia')
 screen.exitonclick()
