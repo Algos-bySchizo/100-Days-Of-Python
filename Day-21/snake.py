@@ -9,7 +9,7 @@ class Snake:
     def create_snake(self):
         for position in STARTING_COORDINATES:
             snake=Turtle('square')
-            snake.color('white')
+            snake.color('black')
             snake.penup()
             snake.goto(position)
             self.snakes.append(snake)
@@ -21,13 +21,13 @@ class Snake:
         self.snakes[0].forward(PACE)
     def left(self):
         if self.head.heading()!=0:
-            self.snakes[0].setheading(180)
+            self.head.setheading(180)
     def right(self):
         if self.head.heading()!=180:
-            self.snakes[0].setheading(0)
+            self.head.setheading(0)
     def up(self):
         if self.head.heading()!=270:
-            self.snakes[0].setheading(90)
+            self.head.setheading(90)
     def down(self):
         if self.head.heading()!=90:
-            self.snakes[0].setheading(270)
+            self.head.setheading(270)

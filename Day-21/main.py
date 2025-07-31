@@ -5,7 +5,7 @@ from scoreboard import Scoreboard
 import time
 screen=Screen()
 screen.setup(width=600,height=600)
-screen.bgcolor('black')
+screen.bgcolor('white')
 screen.title('Snake Xenxia')
 screen.tracer(0)
 snake=Snake()
@@ -24,5 +24,5 @@ while game_is_on:
     if snake.head.distance(food)<15:
         food.refresh()
         score.score+=1
-        score.write(f'Score:{score.score}',)
+        score.write(f'score:{score.score}')
 screen.exitonclick()

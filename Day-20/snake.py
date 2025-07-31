@@ -21,7 +21,7 @@ class Snake:
         self.snakes[0].forward(PACE)
     def left(self):
         if self.head.heading()!=0:
-            self.snakes[0].setheading(180)
+            self.head.setheading(180)
     def right(self):
         if self.head.heading()!=180:
             self.snakes[0].setheading(0)
