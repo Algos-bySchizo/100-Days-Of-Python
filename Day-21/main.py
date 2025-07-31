@@ -19,10 +19,9 @@ screen.onkey(snake.right,'Right')
 game_is_on=True 
 while game_is_on:
     screen.update()
-    time.sleep(0.04)
+    time.sleep(0.07)
     snake.move()
     if snake.head.distance(food)<15:
         food.refresh()
-        score.score+=1
-        score.write(f'score:{score.score}')
+        score.increase_score()
 screen.exitonclick()
