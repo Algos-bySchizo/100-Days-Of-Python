@@ -6,11 +6,11 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.penup()
         self.goto(0,280)
-        self.write(f'Score:{self.score}',False,'center',('Arial',8,'normal'))
+        self.write(f'Score:{self.score}',False,'center',('Arial',12,'normal'))
     def increase_score(self):
         self.clear()
         self.score+=1
-        self.write(f'Score:{self.score}',False,'center',('Arial',8,'normal'))
+        self.write(f'Score:{self.score}',False,'center',('Arial',12,'normal'))
     def game_over(self):
         self.goto(0,0)
         self.write('Game Over.',False,'center',('Arial',14,'normal'))
