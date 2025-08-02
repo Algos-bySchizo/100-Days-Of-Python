@@ -1,4 +1,5 @@
 from turtle import Turtle
+from scoreboard import Scoreboard
 STARTING_COORDINATES=[(0,0),(-20,0),(-40,0)]
 PACE=20
 class Snake:
@@ -15,9 +16,11 @@ class Snake:
             self.snakes.append(snake)
     def move(self):
         for snake in range(len(self.snakes)-1,0,-1):
-                last_snake_x=self.snakes[snake-1].xcor()
-                last_snake_y=self.snakes[snake-1].ycor()
-                self.snakes[snake].goto(last_snake_x,last_snake_y)
+            last_snake_x=self.snakes[snake-1].xcor()
+            last_snake_y=self.snakes[snake-1].ycor()
+            self.snakes[snake].goto(last_snake_x,last_snake_y)
+            if self.head.xcor()>300 or self.head.xcor()<-300 or self.head.ycor()>300 or self.head.ycor()<-300:
+                return False
         self.snakes[0].forward(PACE)
     def left(self):
         if self.head.heading()!=0:

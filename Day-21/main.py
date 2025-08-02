@@ -24,4 +24,7 @@ while game_is_on:
     if snake.head.distance(food)<15:
         food.refresh()
         score.increase_score()
+    if snake.move()==False:
+        score.game_over()
+        game_is_on=False
 screen.exitonclick()
