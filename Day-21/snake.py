@@ -8,11 +8,15 @@ class Snake:
         self.head=self.snakes[0]
     def create_snake(self):
         for position in STARTING_COORDINATES:
-            snake=Turtle('square')
-            snake.color('black')
-            snake.penup()
-            snake.goto(position)
-            self.snakes.append(snake)
+         self.append_seg(position)
+    def append_seg(self, position):
+        snake=Turtle('square')
+        snake.color('pink')
+        snake.penup()
+        snake.goto(position)
+        self.snakes.append(snake)
+    def new_seg(self):
+        self.append_seg(self.snakes[-1].position())
     def move(self):
         for snake in range(len(self.snakes)-1,0,-1):
             last_snake_x=self.snakes[snake-1].xcor()
