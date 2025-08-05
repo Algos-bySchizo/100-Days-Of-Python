@@ -24,3 +24,9 @@ class Scoreboard(Turtle):
     def r_point(self):
         self.r_score+=1
         self.update_scoreboard()
+    
+    def game_over(self):
+        if self.l_score==10 or self.r_score==10:
+            return False
+        return True
+        

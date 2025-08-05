@@ -25,6 +25,7 @@ while game_is_on:
     time.sleep(ball.move_speed)
     screen.update()
     ball.move()
+    game_is_on=scoreboard.game_over()
     if ball.ycor()==300 or ball.ycor()==-300:
         ball.bounce()
     if ball.distance(r_paddle)<55 and ball.xcor()>320 or ball.distance(l_paddle)<55 and ball.xcor()<-320:
@@ -35,5 +36,4 @@ while game_is_on:
     if ball.xcor()<-380:
         ball.restartpos()
         scoreboard.r_point()
-    
 screen.exitonclick()
