@@ -10,10 +10,13 @@ screen.tracer(0)
 screen.listen()
 
 player=Player()
+obs=CarManager()
 
 screen.onkey(player.move,'Up')
 
 game_is_on = True
 while game_is_on:
+    obs.create_car()
+    obs.move_cars()
     time.sleep(0.1)
     screen.update()
