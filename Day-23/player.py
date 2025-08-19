@@ -19,6 +19,6 @@ class Player(Turtle):
     
     def is_at_finish_line(self):
         if self.ycor()>280:
-            self.go_to_start()
+            return True
         else:
             return False
