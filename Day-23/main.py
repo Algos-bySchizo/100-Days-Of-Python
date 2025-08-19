@@ -16,7 +16,10 @@ screen.onkey(player.move,'Up')
 
 game_is_on = True
 while game_is_on:
-    obs.create_car()
-    obs.move_cars()
     time.sleep(0.1)
     screen.update()
+    obs.create_car()
+    obs.move_cars()
+    for car in obs.allcars:
+        if car.distance(player)<20:
+            game_is_on = False 
