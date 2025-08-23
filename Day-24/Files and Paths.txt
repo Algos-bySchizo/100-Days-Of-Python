@@ -1,0 +1,10 @@
+Learing about Absolute and Relative paths for files!
+****************************************************
+
+1- Absolute Path: Are those which starts form the orgin like C:\Users\JUNIADY'S\Documents\Learning Journey\Git Repos\.....to this file!
+   in simpler words Absolute paths are the complete paths of a file from the SDD/HDD to the end file.
+   
+2- Relative Path: for a file is a path which is from the working folder/directory like if I want to run the Day-24's main.py file I don't need
+   to specify the whole path instead I can just access it from the current working directory like .\main.py as we're already in the
+   Day-24 directory and we use two .. if we want to access a different directory's file which happens to be in a sub folder just like the 
+   previous folder i.e '..\Day-23' 
