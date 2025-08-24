@@ -8,6 +8,12 @@
         #Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
 
 # names=[]
-with open("./Letters/starting.txt") as file:
-    names=file.readlines()
+with open("Input/Names/invited_names.txt") as file:
+    names=[name.strip() for name in file.readlines()]
     print(names)
+with open('Input/Letters/starting_letter.txt') as file:
+    letter=file.read()
+    letter.strip()
+    for name in names: 
+        with open(f'Output/ReadyToSend/{name}_invitation.txt','w') as file :
+            file.write(letter.replace('[name]',name))
