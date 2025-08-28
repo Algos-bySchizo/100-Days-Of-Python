@@ -41,3 +41,12 @@ print(monday.condition)
 monday=data[data.day=='Monday']
 print(monday.temp)
 print((monday.temp*9/5)+32)
+
+""" Creating DataFrames from scratch and making a CSV file of it using a method in Pandas known as .to_csv() """
+
+data_dict={'students':['Usman','Ali','Abdullah'],
+           'scores':[100,67,90]}
+
+data=pandas.DataFrame(data_dict)
+data.to_csv('new_csv.csv')
+print(data)
