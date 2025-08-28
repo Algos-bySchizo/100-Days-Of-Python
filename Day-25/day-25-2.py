@@ -13,3 +13,4 @@ print(data_dict)
 
 temp_list=data['day'].to_list()
 print(temp_list)
+
