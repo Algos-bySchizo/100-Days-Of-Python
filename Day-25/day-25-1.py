@@ -1,4 +1,4 @@
-import pandas
+import pandas   
 
 data=pandas.read_csv('weather_data.csv')
 temprature=data['temp'].to_list()
