@@ -16,12 +16,9 @@ guessed_states=[]
 while len(guessed_states)<50:
     guess=screen.textinput(f'{len(guessed_states)}/50 States Correct','Guess a state name').title()
     if guess == 'Exit':
-        missing_states=[]
-        for state in states:
-            if state not in guessed_states:
-                missing_states.append(state)
-                df=pandas.DataFrame(missing_states)
-                df.to_csv('missed states.csv')
+        missing_states=[state for state in states if state not in guessed_states]
+        df=pandas.DataFrame(missing_states)
+        df.to_csv('missed states.csv')
         break
     if guess in states and guess not in guessed_states:
         score+=1
